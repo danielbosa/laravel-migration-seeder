@@ -5,7 +5,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
+              {{-- <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link {{Route::currentRouteName() == 'home' ? 'active' : ''}}" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
@@ -16,7 +16,7 @@
                   <a class="nav-link {{Route::currentRouteName() == 'movies.index' ? 'active' : ''}}" href="{{route('movies.index')}}">Movies</a>
                 </li>
 
-              </ul>
+              </ul> --}}
             </div>
           </div>
       </nav>
