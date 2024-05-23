@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('destination', 255);
             $table->date('departure_date'); 
             $table->time('departure_time');
-            $table->date('departure_date'); 
-            $table->time('departure_time');
             $table->date('arrival_date');
             $table->date('arrival_time');
             $table->string('train_id',20);
