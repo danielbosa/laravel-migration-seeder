@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Train;
 use Faker\Generator as Faker;
 
+use App\Functions\Helpers as Help;
+
 class treni_trenordSeeder extends Seeder
 {
     /**
@@ -41,16 +43,8 @@ class treni_trenordSeeder extends Seeder
     public function run()
     {
         $path = __DIR__ . '/trains.csv';
-        $file_stream = fopen($path, 'r');
-        if($file_stream === false){
-            exit('Cannot open file');
-        }
-        $data=[];
-        while($row = fgetcsv($file_stream)){
-            $data[] = $row;
-        };
-        //dd($data);
-        fclose($file_stream);
+        $data = Help::getCsvData($path);
+        // dd($data);
         foreach($data as $index=>$train){
             if($index !== 0){
                 $newTrain = new Train();
@@ -70,4 +64,5 @@ class treni_trenordSeeder extends Seeder
             }
         }
     }
+
 }
