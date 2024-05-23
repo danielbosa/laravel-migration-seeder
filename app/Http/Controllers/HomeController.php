@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $trains = Train::all(); // Recupera tutti i treni
+        $trains = Train::where('departure_date','>',\DB::raw('CURRENT_DATE()'))->get();
         return view('home', compact('trains')); // Passa la variabile $trains alla vista
     }
 
