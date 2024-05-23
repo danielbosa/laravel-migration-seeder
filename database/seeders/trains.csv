@@ -1,0 +1,11 @@
+id,company,departure,destination,departure_date,departure_time,arrival_date,arrival_time,train_id,carriage_count,on_time,confirmed
+1,Trenitalia,Roma,Milano,2024-06-01,08:30:00,2024-06-01,12:15:00,T1234,10,1,0
+2,Italo,Napoli,Firenze,2024-06-01,09:00:00,2024-06-01,11:45:00,I5678,8,0,1
+3,Trenord,Milano,Como,2024-06-01,10:15:00,2024-06-01,11:00:00,T9876,5,1,0
+4,Frecciarossa,Venezia,Roma,2024-06-01,14:30:00,2024-06-01,18:20:00,F2345,12,0,1
+5,Italo,Torino,Bologna,2024-06-02,07:45:00,2024-06-02,10:30:00,I3456,9,1,0
+6,Trenitalia,Firenze,Genova,2024-06-02,16:00:00,2024-06-02,19:10:00,T6789,11,1,1
+7,Frecciarossa,Roma,Napoli,2024-06-02,12:00:00,2024-06-02,13:10:00,F4567,7,0,0
+8,Italo,Milano,Venezia,2024-06-03,06:30:00,2024-06-03,09:00:00,I7890,6,1,1
+9,Trenord,Lecco,Bergamo,2024-06-03,18:00:00,2024-06-03,19:30:00,T5432,4,0,1
+10,Frecciarossa,Bologna,Roma,2024-06-03,20:45:00,2024-06-03,23:30:00,F8765,10,1,0

@@ -14,6 +14,8 @@ class treni_trenordSeeder extends Seeder
      *
      * @return void
      */
+
+    /*!USANDO FAKER
     public function run(Faker $faker)
     {
         for($i = 0; $i < 100; $i++){
@@ -32,5 +34,40 @@ class treni_trenordSeeder extends Seeder
             $newTrain->save();
         }
 
+    }
+    */
+
+    /*!USANDO CSV*/
+    public function run()
+    {
+        $path = __DIR__ . '/trains.csv';
+        $file_stream = fopen($path, 'r');
+        if($file_stream === false){
+            exit('Cannot open file');
+        }
+        $data=[];
+        while($row = fgetcsv($file_stream)){
+            $data[] = $row;
+        };
+        //dd($data);
+        fclose($file_stream);
+        foreach($data as $index=>$train){
+            if($index !== 0){
+                $newTrain = new Train();
+                $newTrain->company = $train[0];
+                $newTrain->company = $train[1];
+                $newTrain->departure = $train[2];
+                $newTrain->destination = $train[3];
+                $newTrain->departure_date = $train[4];
+                $newTrain->departure_time = $train[5];
+                $newTrain->arrival_date = $train[6];
+                $newTrain->arrival_time = $train[7];
+                $newTrain->train_id = $train[8];
+                $newTrain->carriage_count = $train[9];
+                $newTrain->on_time = $train[10];
+                $newTrain->confirmed = $train[11];
+                $newTrain->save();
+            }
+        }
     }
 }
