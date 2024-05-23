@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('treni_trenord', function (Blueprint $table) {
+            //!ATTN a nome tabella: dev'essere in inglese e plurale, sennò poi hai problemi nel Model
             $table->id();
             $table->string('company', 255);
             $table->string('departure', 255);
